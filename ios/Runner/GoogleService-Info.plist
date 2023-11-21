@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1001101738327-o82det6dd7pkb75f3hvgc9h7hc2aeubf.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1001101738327-o82det6dd7pkb75f3hvgc9h7hc2aeubf</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCnw7DPoxU9kcDPcZaouBg9hQpm4K6tLpE</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1001101738327</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.proyectoFinal</string>
+	<key>PROJECT_ID</key>
+	<string>laravel-auth-29f2b</string>
+	<key>STORAGE_BUCKET</key>
+	<string>laravel-auth-29f2b.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1001101738327:ios:982d4c3b184f0c72fdfe12</string>
+	<key>DATABASE_URL</key>
+	<string>https://laravel-auth-29f2b-default-rtdb.firebaseio.com</string>
+</dict>
+</plist>

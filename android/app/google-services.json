@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1001101738327",
+    "firebase_url": "https://laravel-auth-29f2b-default-rtdb.firebaseio.com",
+    "project_id": "laravel-auth-29f2b",
+    "storage_bucket": "laravel-auth-29f2b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1001101738327:android:75c8239455b7ea28fdfe12",
+        "android_client_info": {
+          "package_name": "com.example.proyecto_final"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1001101738327-uikp7a7ga9i86p256r695b5ab94lm2ft.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyApvrrOSZYQklwO4l6HgJ9AcLYXAmgWNKE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1001101738327-uikp7a7ga9i86p256r695b5ab94lm2ft.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
