@@ -39,8 +39,11 @@ class _SearchBarState extends State<SearchBar> {
           child: ListView.builder(
             itemCount: _items.length,
             itemBuilder: (context, index) {
-              return ListTile(
-                title: Text(_items[index]['nombre_proyecto']),
+              return Card(
+                child: ListTile(
+                  title: Text(_items[index]['nombre_proyecto']),
+                  subtitle: Text(_items[index]['nombre_completo']),
+                ),
               );
             },
           ),

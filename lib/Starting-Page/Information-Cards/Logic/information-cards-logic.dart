@@ -1,11 +1,11 @@
 // ignore_for_file: file_names
 import 'package:firebase_database/firebase_database.dart';
 
-class SearchBarLogic {
+class InformationCardsLogic {
   final DatabaseReference _ref = FirebaseDatabase.instance.ref('proyectista');
 
-  Future<List> search(String query) async {
-    DatabaseEvent event = await _ref.orderByChild('nombre_proyecto').startAt(query).endAt(query + "\uf8ff").once();
+  Future<List> getProyectistas() async {
+    DatabaseEvent event = await _ref.once();
     DataSnapshot snapshot = event.snapshot;
     List items = [];
     if (snapshot.value != null) {
@@ -16,5 +16,3 @@ class SearchBarLogic {
     return items;
   }
 }
-
-
