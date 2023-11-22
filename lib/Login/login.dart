@@ -38,8 +38,9 @@ class _LoginDemoState extends State<LoginDemo> {
           ),
           FloatingActionButton(
             onPressed: () async {
-              await signIn(context, _emailController.text,
-                  _passwordController.text);
+            
+              await AuthSingleton().signIn(context, _emailController.text, _passwordController.text);
+
             },
             child: const Text('Iniciar sesión'),
           ),
