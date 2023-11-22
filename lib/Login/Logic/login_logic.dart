@@ -13,13 +13,14 @@ class AuthSingleton {
 
   AuthSingleton._internal();
 
-  Future<void> signIn(BuildContext context, String email, String password) async {
+    Future<void> signIn(BuildContext context, String email, String password, Function onSignInSuccess) async {
     try {
       // ignore: unused_local_variable
       final user = await _auth.signInWithEmailAndPassword(
         email: email,
         password: password,
       );
+      onSignInSuccess();
       showDialog(
         context: context,
         builder: (BuildContext context) {
@@ -33,6 +34,10 @@ class AuthSingleton {
     } catch (e) {
       showDialogError(context, e);
     }
+  }
+  
+  Future<void> signOut() async {
+    await _auth.signOut();
   }
 
   void showDialogError(BuildContext context, dynamic error) {
