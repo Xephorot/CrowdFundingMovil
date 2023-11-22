@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
 import 'package:proyecto_final/Login/Buttons/sign_out_button.dart';
@@ -20,11 +20,11 @@ class StartingPage extends StatelessWidget {
       body: Column(
         children: <Widget>[
           Expanded(
-            flex: 4,
+            flex: 5,
             child: const customSearchBar.SearchBar(),
           ),
           Expanded(
-            flex: 9,
+            flex: 10,
             child: const InformationCards(),
           ),
         ],

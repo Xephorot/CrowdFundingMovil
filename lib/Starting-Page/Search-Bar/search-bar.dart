@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:proyecto_final/Starting-Page/Search-Bar/Logic/search-bar-logic.dart';
-
+import 'package:proyecto_final/Starting-Page/Information-Cards/Buttons/full-information.dart';
 
 class SearchBar extends StatefulWidget {
   const SearchBar({super.key});
@@ -43,6 +43,7 @@ class _SearchBarState extends State<SearchBar> {
                 child: ListTile(
                   title: Text(_items[index]['nombre_proyecto']),
                   subtitle: Text(_items[index]['nombre_completo']),
+                  onTap: () => showFullInformation(context, _items[index]),
                 ),
               );
             },

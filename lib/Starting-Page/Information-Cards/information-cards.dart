@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:proyecto_final/Starting-Page/Information-Cards/Logic/information-cards-logic.dart';
+import 'package:proyecto_final/Starting-Page/Information-Cards/Buttons/full-information.dart';
 
 class InformationCards extends StatefulWidget {
   const InformationCards({super.key});
@@ -34,6 +35,7 @@ class _InformationCardsState extends State<InformationCards> {
           child: ListTile(
             title: Text(_items[index]['nombre_proyecto']),
             subtitle: Text(_items[index]['nombre_completo']),
+            onTap: () => showFullInformation(context, _items[index]),
           ),
         );
       },
