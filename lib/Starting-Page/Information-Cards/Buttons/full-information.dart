@@ -19,35 +19,41 @@ void showFullInformation(BuildContext context, Map proyectistaData) {
               ),
             ),
             actions: <Widget>[
-              TextButton(
-                child: Text(referencesLogic.showReferences ? 'Volver' : 'Referencias'),
-                onPressed: () {
-                  setState(() {
-                    referencesLogic.toggleReferences();
-                  });
-                },
-              ),
-              TextButton(
-                child: const Text('Cerrar'),
-                onPressed: () {
-                  Navigator.of(context).pop();
-                },
-              ),
-              TextButton(
-                child: Text(referencesLogic.showReferences ? 'Llamar' : 'Ver en mapa'),
-                onPressed: () {
-                  Navigator.of(context).pop();
-                  if (referencesLogic.showReferences) {
-                    launch('tel:${proyectistaData['tel']}');
-                  } else {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => MapView(coordinates: proyectistaData['coordenadas']),
-                      ),
-                    );
-                  }
-                },
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  TextButton(
+                    child: Text(referencesLogic.showReferences ? 'Volver' : 'Referencias'),
+                    onPressed: () {
+                      setState(() {
+                        referencesLogic.toggleReferences();
+                      });
+                    },
+                  ),
+                  TextButton(
+                    child: const Text('Cerrar'),
+                    onPressed: () {
+                      Navigator.of(context).pop();
+                    },
+                  ),
+                  TextButton(
+                    child: Text(referencesLogic.showReferences ? 'Llamar' : 'Ver en mapa'),
+                    onPressed: () {
+                      Navigator.of(context).pop();
+                      if (referencesLogic.showReferences) {
+                        // ignore: deprecated_member_use
+                        launch('tel:${proyectistaData['tel']}');
+                      } else {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => MapView(coordinates: proyectistaData['coordenadas']),
+                          ),
+                        );
+                      }
+                    },
+                  ),
+                ],
               ),
             ],
           );
@@ -56,6 +62,3 @@ void showFullInformation(BuildContext context, Map proyectistaData) {
     },
   );
 }
-
-
-

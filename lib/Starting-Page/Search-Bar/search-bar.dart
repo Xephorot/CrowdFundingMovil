@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:proyecto_final/Starting-Page/Search-Bar/Logic/search-bar-logic.dart';
 import 'package:proyecto_final/Starting-Page/Information-Cards/Buttons/full-information.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class SearchBar extends StatefulWidget {
   const SearchBar({super.key});
@@ -44,6 +45,12 @@ class _SearchBarState extends State<SearchBar> {
                   title: Text(_items[index]['nombre_proyecto']),
                   subtitle: Text(_items[index]['nombre_completo']),
                   onTap: () => showFullInformation(context, _items[index]),
+                  trailing: IconButton(
+                    icon: Icon(Icons.monetization_on),
+                    onPressed: () {
+                      launch('https://www.google.com');
+                    },
+                  ),
                 ),
               );
             },
