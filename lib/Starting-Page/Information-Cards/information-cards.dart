@@ -1,3 +1,5 @@
+// ignore_for_file: library_private_types_in_public_api, deprecated_member_use, file_names
+
 import 'package:flutter/material.dart';
 import 'package:proyecto_final/Starting-Page/Information-Cards/Logic/information-cards-logic.dart';
 import 'package:proyecto_final/Starting-Page/Information-Cards/Buttons/full-information.dart';

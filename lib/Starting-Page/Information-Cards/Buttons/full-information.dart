@@ -47,7 +47,12 @@ void showFullInformation(BuildContext context, Map proyectistaData) {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => MapView(coordinates: proyectistaData['coordenadas']),
+                            builder: (context) => MapView(
+                              coordinates: proyectistaData['coordenadas'],
+                              municipio: proyectistaData['municipio'],
+                              nombreCompleto: proyectistaData['nombre_completo'],
+                              nombreProyecto: proyectistaData['nombre_proyecto'],
+                            ),
                           ),
                         );
                       }
