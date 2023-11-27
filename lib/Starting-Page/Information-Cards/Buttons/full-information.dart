@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:proyecto_final/Starting-Page/Information-Cards/Buttons/references_logic.dart';
 import 'package:proyecto_final/Starting-Page/Map-Screen/map-view.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 void showFullInformation(BuildContext context, Map proyectistaData) {
   final referencesLogic = ReferencesLogic();
@@ -33,15 +34,19 @@ void showFullInformation(BuildContext context, Map proyectistaData) {
                 },
               ),
               TextButton(
-                child: const Text('Ver en mapa'),
+                child: Text(referencesLogic.showReferences ? 'Llamar' : 'Ver en mapa'),
                 onPressed: () {
                   Navigator.of(context).pop();
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => MapView(coordinates: proyectistaData['coordenadas']),
-                    ),
-                  );
+                  if (referencesLogic.showReferences) {
+                    launch('tel:${proyectistaData['tel']}');
+                  } else {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => MapView(coordinates: proyectistaData['coordenadas']),
+                      ),
+                    );
+                  }
                 },
               ),
             ],
@@ -51,5 +56,6 @@ void showFullInformation(BuildContext context, Map proyectistaData) {
     },
   );
 }
+
 
 
