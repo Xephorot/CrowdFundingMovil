@@ -2,7 +2,7 @@
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:proyecto_final/Login/login.dart';
+import 'package:proyecto_final/Login/views/login.dart';
 
 class SignOutButton extends StatelessWidget {
   const SignOutButton({super.key});

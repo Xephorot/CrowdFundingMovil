@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 //Importaciones de Flutter
 import 'package:firebase_core/firebase_core.dart';
-import 'package:proyecto_final/Login/login.dart';
+import 'package:proyecto_final/Login/views/login.dart';
 import 'firebase_options.dart';
 
 void main() async {
