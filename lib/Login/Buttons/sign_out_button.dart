@@ -18,6 +18,12 @@ class SignOutButton extends StatelessWidget {
           (route) => false,
         );
       },
+      style: ElevatedButton.styleFrom(
+        primary: Colors.green[800],
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(30.0),
+        ),
+      ),
       child: const Text('Cerrar sesión'),
     );
   }
