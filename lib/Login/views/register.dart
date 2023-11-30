@@ -18,6 +18,8 @@ class _RegistroDemoState extends State<RegistroDemo> {
   final _passwordController = TextEditingController();
   final _confirmPasswordController = TextEditingController();
 
+  final _nameController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,6 +31,13 @@ class _RegistroDemoState extends State<RegistroDemo> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            TextField(
+              controller: _nameController,
+              decoration: const InputDecoration(
+                border: OutlineInputBorder(),
+                labelText: 'Nombre',
+              ),
+            ),
             TextField(
               controller: _emailController,
               decoration: const InputDecoration(
